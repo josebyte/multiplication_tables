@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  tables = [];
+
+  constructor() {
+      this.tables = Array.from({length: 10},(v, k) => k + 1);
+  }
+
+  save(newTable: number) :boolean {
+    this.tables.push(newTable);
+      return false;
+  }
+
 }
