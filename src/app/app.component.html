@@ -1,48 +1,26 @@
-<nav class="navbar navbar-dark bg-primary">
-  <span class="navbar-brand mb-0 h1">Multiplication tables</span>
-</nav>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="#">Multiplication tables</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-<div class="container content">
-
-  <div class="row mt-3">
-    <div class="col-md-6 offset-md-3">
-      <div class="card card-outline-secondary">
-        <div class="card-header">
-          <h3>Add new multiplication table</h3>
-        </div>
-        <div class="card-body">
-          <form>
-            <div class="form-group">
-              <label for="newTable">New table:</label>
-              <input id="newTable" type="number" class="form-control" #newTable>
-            </div>
-            <div class="col text-center">
-              <button type="submit" class="btn btn-primary" (click)="save(newTable.value)">Add</button>
-            </div>
-          </form>
-        </div>
-
-      </div>
-
-    </div>
-  </div>
-
-  <div class="row">
-    <h2>Current tables:</h2>
-  </div>
-  <div class="row">
-    <ul class="list-group">
-      <li class="list-group-item" *ngFor="let t of tables">
-        {{t}} table
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a routerLinkActive="active" class="nav-link" href="#" [routerLink]="['/home/']">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a routerLinkActive="active" class="nav-link" href="#" [routerLink]="['/exercises/']">Exercises</a>
       </li>
     </ul>
-  </div>
 
-  <div class="row">
-    <h2>Multiplication tables:</h2>
   </div>
-  <div class="row">
-    <app-table *ngFor="let t of tables" [table]="t"></app-table>
-  </div>
+</nav>
 
+
+<div class="container content">
+  <router-outlet></router-outlet>
 </div>
+
+
+

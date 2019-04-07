@@ -1,0 +1,6 @@
+<div class="row">
+  <app-table *ngFor="let t of tables"
+             [table]="t"
+             [routerLink]="['/exercise/', t]">
+  </app-table>
+</div>

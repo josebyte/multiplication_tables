@@ -1,0 +1,4 @@
+<div>
+  <div>Total points: {{points}}</div>
+  <app-exercise (calification)="sumPoints($event)" *ngFor="let a of data"></app-exercise>
+</div>

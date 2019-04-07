@@ -1,0 +1,7 @@
+<form [formGroup]="resultForm" (submit)="checkCalification()">
+  <div class="form-group">
+    <label for="result">{{ n1 }} x {{ n2 }} = </label>
+    <input formControlName="result" id="result" type="number" class="form-control" />
+    <button [disabled]="tries" type="submit" class="btn btn-primary">Check</button>
+  </div>
+</form>
